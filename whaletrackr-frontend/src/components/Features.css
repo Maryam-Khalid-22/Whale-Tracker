@@ -1,0 +1,314 @@
+.features {
+  padding: 4rem 0;
+  background: #0a0a0a;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.features h2 {
+  text-align: center;
+  color: #00ff88;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.features-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.feature-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.feature-card.active {
+  border-color: #00ff88;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.2);
+}
+
+.feature-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.feature-icon {
+  font-size: 2rem;
+}
+
+.feature-header h3 {
+  color: #00ff88;
+  margin: 0;
+  flex: 1;
+}
+
+.feature-toggle {
+  color: #00ff88;
+  font-size: 1.2rem;
+}
+
+.feature-description {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.feature-details {
+  border-top: 1px solid #333;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+/* Alert Options */
+.alert-options h4,
+.analytics-dashboard h4,
+.trigger-settings h4 {
+  color: #00ff88;
+  margin-bottom: 1rem;
+}
+
+.option-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  color: white;
+  cursor: pointer;
+}
+
+.toggle-slider {
+  width: 40px;
+  height: 20px;
+  background: #333;
+  border-radius: 20px;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.toggle-slider:before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"]:checked + .toggle-slider {
+  background: #00ff88;
+}
+
+input[type="checkbox"]:checked + .toggle-slider:before {
+  transform: translateX(20px);
+}
+
+/* Buttons */
+.save-btn, .export-btn, .save-triggers {
+  background: #00ff88;
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: all 0.3s;
+}
+
+.save-btn:hover, .export-btn:hover, .save-triggers:hover {
+  background: #00cc6a;
+  transform: translateY(-2px);
+}
+
+/* Analytics Dashboard */
+.chart-options {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.chart-options select {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 0.5rem;
+  border-radius: 4px;
+}
+
+.chart-placeholder {
+  background: #222;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  color: #888;
+  margin: 1rem 0;
+}
+
+/* NEW CHART VISUALIZATION STYLES */
+.chart-container {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.chart-container h5 {
+  color: #00ff88;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.chart-bars {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  gap: 12px;
+  height: 200px;
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+}
+
+.chart-bar {
+  background: linear-gradient(to top, #00ff88, #00cc6a);
+  width: 35px;
+  border-radius: 4px 4px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  transition: height 0.3s ease;
+  position: relative;
+  min-height: 20px;
+}
+
+.chart-bar span {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 10px;
+  margin-top: 5px;
+  color: #000;
+  font-weight: bold;
+  position: absolute;
+  bottom: -25px;
+}
+
+.chart-bar:hover {
+  background: linear-gradient(to top, #00cc6a, #00aa50);
+  transform: scale(1.05);
+}
+
+/* Trigger Settings */
+.currency-select, .threshold-settings, .exchange-select {
+  margin-bottom: 1rem;
+}
+
+.currency-select label, .threshold-settings label {
+  display: block;
+  color: white;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.currency-select select {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.threshold-settings input {
+  background: #333;
+  color: white;
+  border: 1px solid #555;
+  padding: 0.5rem;
+  border-radius: 4px;
+  width: 120px;
+  margin-left: 0.5rem;
+}
+
+.threshold-settings label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.exchange-select {
+  display: flex;
+  flex-direction: column;
+}
+
+.exchange-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.3rem 0;
+  color: white;
+  cursor: pointer;
+}
+
+.exchange-checkbox input {
+  margin: 0;
+  width: 16px;
+  height: 16px;
+}
+
+.exchange-checkbox:hover {
+  color: #00ff88;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-options {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .chart-bars {
+    gap: 8px;
+    height: 150px;
+  }
+  
+  .chart-bar {
+    width: 25px;
+  }
+  
+  .chart-bar span {
+    font-size: 8px;
+    bottom: -20px;
+  }
+  
+  .threshold-settings label {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .threshold-settings input {
+    margin-left: 0;
+    width: 100%;
+    max-width: 200px;
+  }
+}
