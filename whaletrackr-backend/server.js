@@ -1,15 +1,11 @@
-require('dotenv').config();
-
-// Then use it like this:
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/whaletrackr';
-const PORT = process.env.PORT || 5000;
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const http = require('http');
 const socketIo = require('socket.io');
+require('dotenv').config(); // ← ADDED THIS LINE
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 
 // Middleware
@@ -29,8 +25,8 @@ const io = socketIo(server, {
   }
 });
 
-// MongoDB Connection - SIMPLE VERSION
-const MONGODB_URI = 'mongodb+srv://AryaShell:aryasheikh%40%23%241234567890@whaletrackr-cluster.gq86xwa.mongodb.net/whaletrackr?retryWrites=true&w=majority&appName=whaletrackr-cluster';
+// ✅ MongoDB Connection - NOW READING FROM .env FILE
+const MONGODB_URI = process.env.MONGODB_URI;
 
 console.log('🔗 Trying to connect to database...');
 
